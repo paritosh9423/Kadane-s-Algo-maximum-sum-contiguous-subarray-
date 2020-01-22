@@ -1,15 +1,14 @@
 class Main {
   public static void main(String[] args) {
     System.out.println("Hello world!");
-  /*//Kadane's Algo
-  int maxEndingHere = 0 ;
-        int maxSoFar = 0;
-        for(int i=0;i<nums.length;i++){
-            maxEndingHere = maxEndingHere + nums[i];
-            if(maxEndingHere < 0)
-                maxEndingHere = 0;
-            if(maxSoFar<maxEndingHere)
-                maxSoFar = maxEndingHere;
+  /*  //Kadane's Algorithm
+        int maxEndingHere = nums[0] ;
+        int maxSoFar = nums[0];
+       
+        
+        for(int i=1;i<nums.length;i++){
+           maxEndingHere = Math.max(nums[i],maxEndingHere+nums[i]);
+            maxSoFar = Math.max(maxSoFar,maxEndingHere);
         }
         return maxSoFar;
 
